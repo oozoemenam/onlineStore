@@ -6,7 +6,7 @@
     @foreach ($viewData['products'] as $product)
       <div class="col-md-4 col-lg-3 mb-2">
         <div class="card">
-          <img class="card-img-top img-card" src="{{ asset('/img/' . $product->getImage()) }}">
+          <img class="card-img-top img-card" src="{{ asset('/storage/' . $product->getImage()) }}">
           <div class="card-body text-center">
             <a class="btn bg-primary text-white"
               href="{{ route('product.show', ['id' => $product->getId()]) }}">{{ $product->getName() }}</a>

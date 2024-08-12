@@ -40,7 +40,7 @@
     <div class="container">
       <small>
         Copyright - <a class="text-reset fw-bold text-decoration-none" href="https://x.com" target="_blank">
-          David Oz
+          Jack Sparrow
         </a>
       </small>
     </div>
