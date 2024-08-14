@@ -17,9 +17,8 @@ class User extends Authenticatable
     * $this->attributes['id'] - int - contains the user primary key (id) * $this->attributes['name'] - string - contains the user name* $this->attributes['email'] - string - contains the user email
     * $this->attributes['email_verified_at'] - timestamp - contains the user email verification date * $this->attributes['password'] - string - contains the user password
     * $this->attributes['remember_token'] - string - contains the user password * $this->attributes['role'] - string - contains the user role (client or admin) * $this->attributes['balance'] - int - contains the user balance
-    * $this->attributes['created_at'] - timestamp - contains the user creation date * $this->attributes['updated_at'] - timestamp - contains the user update date
-    */
-
+    * $this->attributes['balance'] - int - contains the user balance
+    * $this->attributes['created_at'] - timestamp - contains the user creation date * $this->attributes['updated_at'] - timestamp - contains the user update date * $this->orders - Order[] - contains the associated orders    */
     /**
      * The attributes that are mass assignable.
      *
@@ -113,5 +112,17 @@ class User extends Authenticatable
     public function setUpdatedAt($updatedAt)
     {
         $this->attributes['updated_at'] = $updatedAt;
+    }
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+    public function getOrders()
+    {
+        return $this->orders;
+    }
+    public function setOrders($orders)
+    {
+        $this->orders = $orders;
     }
 }
