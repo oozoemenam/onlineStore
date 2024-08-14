@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-4">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-2">
     <div class="container">
       <a class="navbar-brand" href="{{ route('home.index') }}">Online Store</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" type="button"
@@ -40,15 +40,15 @@
     </div>
   </nav>
 
-  <header class="masthead bg-primary text-white text-center py-4">
+  {{-- <header class="masthead bg-primary text-white text-center py-4">
     <div class="container d-flex align-items-center flex-column">
       <h2>@yield('subtitle', 'A Laravel Online Store')</h2>
     </div>
-  </header>
+  </header> --}}
 
   <div class="container my-4">@yield('content')</div>
 
-  <footer class="copyright py-4 text-center text-white">
+  <footer class="copyright py-4 text-center text-white" style="position: absolute;bottom:0%;width:100%;">
     <div class="container">
       <small>
         Copyright - <a class="text-reset fw-bold text-decoration-none" href="https://x.com" target="_blank">
